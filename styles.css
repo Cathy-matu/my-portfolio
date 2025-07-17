@@ -5,21 +5,21 @@ html {
 
 :root {
   /* === Custom Color Palette === */
-  --primary: #ff7e5f;
+  --primary: #8b5cf6;
   --primary-foreground: #ffffff;
-  --secondary: #463a41;
-  --secondary-foreground: #f2e9e4;
-  --accent: #feb47b;
-  --accent-foreground: #2a2024;
-  --background: #2a2024;
-  --background-foreground: #f2e9e4;
-  --muted: #392f35;
-  --muted-foreground: #d7c6bc;
-  --destructive: #e63946;
+  --secondary: #2d1b69;
+  --secondary-foreground: #e0e7ff;
+  --accent: #06b6d4;
+  --accent-foreground: #0f172a;
+  --background: #1e1b4b;
+  --background-foreground: #e2e8f0;
+  --muted: #3730a3;
+  --muted-foreground: #c7d2fe;
+  --destructive: #f87171;
   --destructive-foreground: #ffffff;
-  --border: #463a41;
-  --input: #463a41;
-  --ring: #ff7e5f;
+  --border: #4c1d95;
+  --input: #2d1b69;
+  --ring: #8b5cf6;
   /* === End Custom Palette === */
 }
 
