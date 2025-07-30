@@ -22,61 +22,6 @@ html {
   --ring: #8b5cf6;
   /* === End Custom Palette === */
 }
-/*update */
-
-.popup-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  overflow-y: scroll; /* Allow scrolling within the popup if content overflows */
-}
-
-.popup-container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 90%;
-  max-height: 90%;
-  overflow-y: auto;
-  position: relative;
-}
-
-.popup-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 5px;
-}
-
-/* Utility classes, ensure these are present as they are toggled by JS */
-.display-none {
-  display: none !important; /* Use !important to ensure override */
-}
-
-.position-fixed {
-  position: fixed !important; /* Use !important to ensure override */
-  /*width: 100%;*/
-  top: 0;
-  left: 0;
-  z-index: 999;
-}
-
-.no-scroll {
-  overflow: hidden !important; /* Prevents body scrolling */
-  height: 100vh;
-}
-
-/*Update Ends here*/
 body {
   position: relative;
   padding: 0;
@@ -87,7 +32,12 @@ body {
   color: var(--background-foreground);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--primary-foreground);
 }
 
@@ -105,7 +55,8 @@ a {
   transition: color 200ms;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: var(--accent);
   text-decoration: underline;
   outline: none;
@@ -116,8 +67,7 @@ ul {
   padding: 0;
   margin: 0;
 }
-/* === End Theme Styles (Lesson 24) === *
-
+/* === End Theme Styles (Lesson 24) === */
 /* === Begin Portfolio Header & Navigation Styles (Lesson 25) === */
 .position-fixed {
   position: fixed;
@@ -167,7 +117,7 @@ ul {
 
 .logo span {
   display: block;
-  background-color: var(--accent);
+  background-color: var(--primary);
   height: 10px;
   width: 20px;
   border-radius: 0 0 15px 15px;
@@ -190,7 +140,7 @@ ul {
 
 .nav-wrapper ul {
   display: flex;
-  gap: 32px;
+  gap: 2px;
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
@@ -207,7 +157,8 @@ ul {
   transition: all 150ms ease-in-out;
 }
 
-.nav-link a:hover, .nav-link a:focus {
+.nav-link a:hover,
+.nav-link a:focus {
   background-color: var(--muted);
   color: var(--primary-foreground);
 }
@@ -225,7 +176,6 @@ ul {
   }
 }
 /* === End Portfolio Header & Navigation Styles (Lesson 25) === */
-
 /* === Begin Portfolio Mobile Menu (Lesson 26) === */
 
 .display-none {
@@ -304,7 +254,7 @@ ul {
 }
 
 .hero-wrapper::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -317,7 +267,7 @@ ul {
 }
 
 .hero-wrapper::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 40px;
   left: 8vw;
@@ -351,7 +301,7 @@ ul {
 }
 
 .hero-container .highlight {
-  color: var(--accent);
+  color: var(--primary);
   font-size: 1.5rem;
   display: block;
   margin-top: 0.5rem;
@@ -364,7 +314,7 @@ ul {
 }
 
 .hero-cta {
-  background: var(--accent);
+  background: var(--primary);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -372,12 +322,13 @@ ul {
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   transition: background 0.2s, transform 0.2s;
   margin-bottom: 2rem;
 }
 
-.hero-cta:hover, .hero-cta:focus {
+.hero-cta:hover,
+.hero-cta:focus {
   background: var(--primary);
   color: var(--primary-foreground);
   transform: translateY(-2px) scale(1.04);
@@ -400,6 +351,7 @@ ul {
   display: flex;
   gap: 16px;
 }
+
 /* === End Styling Portfolio Hero (Lesson 27) === */
 /* === Begin Styling Portfolio Projects Section (Lesson 28) === */
 .btn {
@@ -420,11 +372,13 @@ ul {
   transition-duration: 300ms;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover,
+.btn:focus {
   background-color: var(--accent);
   color: var(--accent-foreground);
   border-color: var(--ring);
-  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   transform: translateY(-3px);
   outline: none;
 }
@@ -439,7 +393,8 @@ ul {
   background-color: var(--secondary);
   border: 1px solid var(--border);
   border-radius: 16px;
-  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 }
 
 .project-snapshot {
@@ -555,8 +510,6 @@ ul {
     justify-content: start;
   }
 }
-
-
 /* === End Styling Portfolio Projects Section (Lesson 28) === */
 /* === Begin Styling Portfolio About Section (Lesson 29) === */
 .intro-text {
@@ -588,7 +541,7 @@ ul {
 
 .about-wrapper::before,
 .about-wrapper::after {
-  content: '';
+  content: "";
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
@@ -645,7 +598,7 @@ ul {
 }
 
 .contact-wrapper::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -658,7 +611,7 @@ ul {
 }
 
 .contact-wrapper::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 30px;
   right: 10vw;
@@ -711,7 +664,8 @@ form {
   display: flex;
   flex-direction: column;
   align-items: start;
-  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 }
 
 @media screen and (min-width: 768px) {
@@ -769,7 +723,8 @@ textarea {
 
 .contact-container button {
   margin-top: 3px;
-  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   transition: all 300ms ease-in-out;
 }
 
@@ -806,3 +761,67 @@ textarea {
   }
 }
 /* === End Styling Portfolio Footer / Contact Section (Lesson 30) === */
+.no-scroll {
+  overflow-y: hidden;
+  height: 100%;
+  margin: 0;
+}
+
+.display-none {
+  display: none;
+}
+
+.position-fixed {
+  position: fixed;
+}
+.popup-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  overflow-y: scroll; /* Allow scrolling within the popup if content overflows */
+}
+.popup-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+  position: relative;
+}
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+.no-scroll {
+  overflow: hidden !important; /* Prevents body scrolling */
+  height: 100vh;
+}
+.position-fixed {
+  position: fixed !important; /* Use !important to ensure override */
+  /* width: 100%; */
+  top: 0;
+  left: 0;
+  z-index: 999;
+}

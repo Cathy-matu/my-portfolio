@@ -1,12 +1,12 @@
-const projectsSection = document.getElementById('projects-section');
+const projectsSection = document.getElementById("projects-section");
 
 const projects = [
   {
-    name: 'Code Kenya',
+    name: "Code Kenya",
     jobDescription: {
-      company: 'Code Kenya',
-      role: 'Web Dev',
-      year: '2025',
+      company: "Code Kenya",
+      role: "Web Dev",
+      year: "2025",
     },
     description: {
       featured:
@@ -15,47 +15,51 @@ const projects = [
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standar dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with thereleaLorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     languages: {
-      featured: ['html', 'Ruby on rails', 'css', 'javascript'],
-      detailed: ['html', 'css', 'javascript', 'github', 'ruby', 'Bootstrap'],
+      featured: ["html", "Ruby on rails", "css", "javascript"],
+      detailed: ["html", "css", "javascript", "github", "ruby", "Bootstrap"],
     },
     thumbnail: {
-      featured: 'codekenya.png',
-      detailed: 'codekenya.png',
+      featured: "codekenya.png",
+      detailed: "codekenya.png",
     },
-    liveUrl: 'https://www.codekenya.org/about-us',
-    sourceCode: '',
+    liveUrl: "https://www.codekenya.org/about-us",
+    sourceCode: "https://github.com/Tony-Muriuki/CodeKenya-Portfolio",
   },
   {
-    name: 'Usa Prospects Agent',
+    name: "Usa Prospects Agent",
     jobDescription: {
-      company: 'USAPP',
-      role: 'Full Stack Dev',
-      year: '2025',
+      company: "USAPP",
+      role: "Full Stack Dev",
+      year: "2025",
     },
     description: {
       featured:
-        'Integarating AI Workflows to automate tasks like college essay review, answer questions on the entire US college application process, and more.',
+        "Integarating AI Workflows to automate tasks like college essay review, answer questions on the entire US college application process, and more.",
       detailed:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standar dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with thereleaLorem Ipsum is simply dummy text of the printing and typesetting industry.",
     },
     languages: {
-      featured: ['html', 'Ruby on rails', 'css', 'javascript'],
-      detailed: ['html', 'css', 'javascript', 'github', 'ruby', 'Bootstrap'],
+      featured: ["html", "Ruby on rails", "css", "javascript"],
+      detailed: ["html", "css", "javascript", "github", "ruby", "Bootstrap"],
     },
     thumbnail: {
-      featured: 'usapp.png',
-      detailed: 'usapp.png',
+      featured: "usapp.png",
+      detailed: "usapp.png",
     },
-    liveUrl: 'https://www.usaprospectsagent.com/',
-    sourceCode: '',
+    liveUrl: "https://www.usaprospectsagent.com/",
+    sourceCode: "https://github.com/Tony-Muriuki/CodeKenya-Portfolio",
   },
 ];
 
 for (let i = 0; i < projects.length; i += 1) {
-  const projectContainer = document.createElement('div');
-  projectContainer.innerHTML = ` <div class="project-snapshot ${i % 2 !== 0 ? 'odd' : ''}">
+  const projectContainer = document.createElement("div");
+  projectContainer.innerHTML = ` <div class="project-snapshot ${
+    i % 2 !== 0 ? "odd" : ""
+  }">
     <a href="">
-      <img src="assets/img/projects/${projects[i].thumbnail.featured}" alt=${projects[i].name} />
+      <img src="assets/img/projects/${projects[i].thumbnail.featured}" alt=${
+    projects[i].name
+  } />
     </a>
   </div>
   <div class="project-content">
@@ -77,20 +81,22 @@ for (let i = 0; i < projects.length; i += 1) {
     </ul>
     <p>${projects[i].description.featured}</p>
     <ul class="technologies-used">
-      ${projects[i].languages.featured.map((language) => `<li>${language}</li>`).join('')}
+      ${projects[i].languages.featured
+        .map((language) => `<li>${language}</li>`)
+        .join("")}
     </ul>
     <button type="button" class="btn">
       see project
     </button>
   </div> `;
-  projectContainer.classList.add('project-container', 'container');
+  projectContainer.classList.add("project-container", "container");
   projectsSection.appendChild(projectContainer);
 }
-const projectButton = document.querySelectorAll('.project-content .btn');
-const headerWrapper = document.querySelector('.header-container');
+const projectButton = document.querySelectorAll(".project-content .btn");
+const headerWrapper = document.querySelector(".header-container");
 
 function createPopup(position) {
-  const popup = document.createElement('section');
+  const popup = document.createElement("section");
   popup.innerHTML = ` <div class="popup-wrapper">
   <div class="popup-container">
     <h2>${projects[position].name}</h2>
@@ -118,14 +124,18 @@ function createPopup(position) {
     </div>
     <div class="popup-snapshot">
       <a href="">
-        <img src=assets/img/projects/${projects[position].thumbnail.detailed} alt=${projects[position].name} />
+        <img src=assets/img/projects/${
+          projects[position].thumbnail.detailed
+        } alt=${projects[position].name} />
       </a>
     </div>
     <div class="popup-content">
       <p>${projects[position].description.detailed}</p>
       <div>
         <ul class="technologies-used">
-          ${projects[position].languages.detailed.map((language) => `<li>${language}</li>`).join('')}
+          ${projects[position].languages.detailed
+            .map((language) => `<li>${language}</li>`)
+            .join("")}
         </ul>
         <div class="btn-wrapper">
           <a href = "${projects[position].liveUrl}" target="_blank">
@@ -153,22 +163,22 @@ function createPopup(position) {
     </div>
   </div>
   </div> `;
-  popup.id = 'project-popup';
+  popup.id = "project-popup";
   projectsSection.appendChild(popup);
-  headerWrapper.classList.toggle('display-none');
-  headerWrapper.classList.toggle('position-fixed');
-  document.body.classList.toggle('no-scroll');
+  headerWrapper.classList.toggle("display-none");
+  headerWrapper.classList.toggle("position-fixed");
+  document.body.classList.toggle("no-scroll");
 }
 
 projectButton.forEach((btn, index) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener("click", () => {
     createPopup(index);
-    const popupHTML = document.getElementById('project-popup');
-    document.querySelector('.popup-close').addEventListener('click', () => {
+    const popupHTML = document.getElementById("project-popup");
+    document.querySelector(".popup-close").addEventListener("click", () => {
       projectsSection.removeChild(popupHTML);
-      headerWrapper.classList.toggle('display-none');
-      headerWrapper.classList.toggle('position-fixed');
-      document.body.classList.toggle('no-scroll');
+      headerWrapper.classList.toggle("display-none");
+      headerWrapper.classList.toggle("position-fixed");
+      document.body.classList.toggle("no-scroll");
     });
   });
 });
