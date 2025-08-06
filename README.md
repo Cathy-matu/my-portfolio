@@ -32,30 +32,28 @@ The portfolio was **built from scratch** using **pure HTML, CSS, and minimal Jav
 ```
 MY-PORTFOLIO
 │
-├── .vscode/                     # ⚙VS Code workspace settings
+├── .vscode/                  
 │
-├── assets/                      # Project assets (images, icons, fonts)
+├── assets/                      
 │   └── img/
-│       ├── lang/                # Language logos
+│       ├── lang/               
 │       │   ├── css3.png
 │       │   ├── html.png
 │       │   └── js.png
 │       │
-│       └── projects/            # Project screenshots
-│           ├── codekenya.png
-│           ├── usapp.png
-│           ├── portfolio.png    #Portfolio page
-│           ├── contact.png      # Contact page
-│           └── aboutme.png      # About Me page
+│       └── projects/           
+│           ├── portfolio.png    
+│           ├── contact.png      
+│           └── aboutme.png     
 │
-├── index.html                   # Main portfolio homepage
-├── index-nojs.html              #  Version without JavaScript
-├── index-nostyle-nojs.html      #  Pure semantic HTML version
+├── index.html                  
+├── index-nojs.html             
+├── index-nostyle-nojs.html      
 │
-├── menu.js                      # Navigation menu logic
-├── projects.js                  # 🖥 Script for projects section
+├── menu.js                      
+├── projects.js                  
 │
-└── styles.css                   # 🎨 Main stylesheet 
+└── styles.css                  
 ```
 
 
